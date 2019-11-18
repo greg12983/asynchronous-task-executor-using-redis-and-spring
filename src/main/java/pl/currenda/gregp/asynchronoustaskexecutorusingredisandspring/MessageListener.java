@@ -7,8 +7,6 @@ import lombok.extern.slf4j.Slf4j;
 @Component
 @Slf4j
 public class MessageListener {
-
-	//private static final Logger log = LoggerFactory.getLogger(MessageListener.class);
 	
 	@RqueueListener(value = "${email.queue.name}") 
 	public void sendEmail(Email email) {
